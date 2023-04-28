@@ -1,9 +1,30 @@
 import iPhone14 from "../../assets/images/iPhone14.png";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
 
 const Use = () => {
+    const controls = useAnimation();
+    const { ref, inView } = useInView({ threshold: 0.5 });
+    useEffect(() => {
+        if (inView) {
+          controls.start('visible');
+        }
+      }, [controls, inView]);
+
     return (
-        <section className="bg-white s:px-5 sm:px-8 md:px-16">
-            <section className="translate-y-10 bg-color1 px-2 s:px-0 flex flex-wrap-reverse justify-center s:justify-evenly mt-8 s:rounded-[30px] mx-auto">
+        <section className="bg-white s:px-5 sm:px-8 md:px-16" ref={ref}>
+            <motion.section
+            initial={{ opacity: 0, scale: 0.2 }}
+            animate={controls}
+            variants={{
+              visible: {
+                opacity: 1,
+                scale: 1,
+                transition: { duration: 0.5}
+              },
+            }} 
+            className="translate-y-10 bg-color1 px-2 s:px-0 flex flex-wrap-reverse justify-center s:justify-evenly mt-8 s:rounded-[30px] mx-auto">
                 <img src={iPhone14} className="mt-8 lg:mt-6" alt="iPhone14-image" />
                 <section className="mt-4"> 
                    <p className="text-white font-bold text-2xl text-center s:text-3xl lg:text-4xl max-w-[500px]"> Thousand of people use Fampay every single day. </p>
@@ -16,7 +37,7 @@ const Use = () => {
                    </div>
                 </section>
 
-            </section>
+            </motion.section>
         </section>
     );
 }

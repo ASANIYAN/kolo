@@ -11,9 +11,14 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="px-[3%]">
+            <motion.nav 
+            className="px-[3%]"
+            animate={{ y: 0, opacity: 1 }}
+            initial={{ y: -100, opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            >
                 <section className="flex justify-between flex-wrap items-center mt-4 navbar space-y-2">
-                    <img src={logo} alt="logo"/>
+                    <img src={logo} alt="logo" loading="lazy"/>
                     <ul className="text-color3 text-base font-medium hidden md:flex space-x-6">
                         <li className="text-color2 cursor-pointer"> Product </li>
                         <li className="cursor-pointer hover:text-color2"> Features </li>
@@ -28,7 +33,7 @@ const Navbar = () => {
                         <button className="font-semibold  bg-color1 border-2 border-color1 py-2 px-2 text-white rounded-[10px] btn-nav"> Sign Up For Free </button>
                     </section>
                 </section>
-            </nav>
+            </motion.nav>
             { isOpen && 
                 <AnimatePresence>
                     <motion.aside            
