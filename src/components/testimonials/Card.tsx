@@ -1,4 +1,4 @@
-import star from "../../assets/icons/Stars.svg.svg";
+import star from "../../assets/icons/Stars.svg";
 
 const Card = () => {
     return (
