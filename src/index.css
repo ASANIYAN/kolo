@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-nav {
+  background-image: linear-gradient(30deg, #25C06D 50%, transparent 50%);
+  background-size: 800px;
+  background-repeat: no-repeat;
+  background-position: 0;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.btn-nav:hover {
+  background-position: 100%;
+  color: #25C06D;
+  background-color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+/* .btn-fam {
+  background-image: linear-gradient(30deg, #fff 50%, transparent 50%);
+  background-size: 800px;
+  background-repeat: no-repeat;
+  background-position: 0;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.btn-fam:hover {
+  background-position: 100%;
+  color: #fff;
+  background-color: #25C06D;
+  transition: 0.3s ease-in-out;
+} */

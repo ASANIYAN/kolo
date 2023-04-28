@@ -1,0 +1,49 @@
+.slider-container {
+    overflow: hidden;
+  }
+  
+  .slider {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: scroll 10s linear infinite;
+  }
+
+  
+  .slider-item {
+    padding-right: 20px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slider-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .container {
+    position: relative;
+    overflow: hidden;
+}
+
+.inner {
+    position: absolute;
+    animation: marquee 10s linear infinite;
+}
+
+.inner img {
+}
+
+@keyframes marquee {
+    0% { right: -100%; }
+    100% { right: 100%; }
+}
+  

@@ -1,0 +1,5 @@
+@media only screen and (min-width: 1112px) {
+    .journey {
+        justify-content: space-between;
+    }
+}

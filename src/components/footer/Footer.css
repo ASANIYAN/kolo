@@ -1,0 +1,9 @@
+.links {
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 819px) {
+    .links {
+        justify-content: space-evenly;
+    }
+}
