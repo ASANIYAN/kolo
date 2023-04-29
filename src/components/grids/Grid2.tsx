@@ -30,13 +30,13 @@ const Grid2 = () => {
                 key={id}
                 >
                     <motion.img
-                    initial={{ opacity: 0, x: 500 }}
+                    initial={{ opacity: 0, scale: 0.2 }}
                     animate={controls}
                     variants={{
                     visible: {
                         opacity: 1,
-                        x: 0,
-                        transition: { duration: 0.7}
+                        scale: 1,
+                        transition: { duration: 0.65}
                     },
                     }} 
                     src={content.img} 
