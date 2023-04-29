@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 
 const Grid2 = () => {
     const controls = useAnimation();
-    const { ref, inView } = useInView({ threshold: 0.8 });
+    const { ref, inView } = useInView({ threshold: 0.5 });
     useEffect(() => {
         if (inView) {
           controls.start('visible');

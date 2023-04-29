@@ -25,7 +25,7 @@ export const Grid1 = () => {
             { contents.map((content, id) => (
                 <section
                 ref={ref}
-                className="max-w-[350px]" key={id}>
+                className="max-w-[350px] mt-8" key={id}>
                     <motion.img
                     initial={{ opacity: 0, x: -500 }}
                     animate={controls}
